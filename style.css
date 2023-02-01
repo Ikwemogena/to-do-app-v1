@@ -1,0 +1,68 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: bisque;
+}
+
+#show-input {
+    margin: 4rem;
+}
+
+#show-input img {
+    width: 5rem;
+}
+
+#show-input img:hover {
+    width: 6rem;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    /* width: 5rem; */
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+}
+input[type="text"]
+{
+    font-size:24px;
+}
+
+.todolist {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 6rem;
+    /* max-width: 10rem; */
+    /* overflow: hidden; */
+}
+
+.list-cards {
+    padding: 3rem;
+    box-shadow: 5px 5px 5px 2px rgba(168, 167, 167, 0.834);
+    border-radius: 0.5rem;
+    width: 30rem;
+}
+
+.card-icons {
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+    width: 20%;
+}
+
+
+.hidden {
+    display: none;
+}
