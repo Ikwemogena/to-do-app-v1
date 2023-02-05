@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;600&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -5,11 +7,18 @@
 }
 
 body {
-    background-color: bisque;
+    font-family: 'Unbounded', sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0rem 0rem;
 }
 
 #show-input {
-    margin: 4rem;
+    margin: 2rem;
 }
 
 #show-input img {
@@ -39,11 +48,11 @@ input[type="text"]
 }
 
 .todolist {
-    display: grid;
+    /* display: grid;
     grid-template-columns: auto auto;
     align-items: center;
     gap: 2rem;
-    margin-top: 6rem;
+    margin-top: 6rem; */
     /* max-width: 10rem; */
     /* overflow: hidden; */
 }
@@ -55,12 +64,7 @@ input[type="text"]
     width: 30rem;
 }
 
-.card-icons {
-    display: flex;
-    justify-content: start;
-    align-items: flex-end;
-    width: 20%;
-}
+
 
 
 .hidden {

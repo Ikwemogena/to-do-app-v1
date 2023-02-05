@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,45 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo</title>
-
     <link rel="stylesheet" href="style.css">
-
     <script src="./script.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>TODO</h1>
+        <h1> MY TO-DO</h1>
     </header>    
-
     <main>
         
         <div class="home">
-            <button id="show-input"><img src="./images/Plus.svg" alt=""></button>
+            <button id="show-input"><img src="./icons/Plus.svg" alt="add task"></button>
         </div>
-
-        <div class="input-box " id="box">
+        <div class="input-box hidden" id="box">
             <form action="" id="form">
                 <input type="text" id="task-input" placeholder="What do you want To Do?">
-                <input type="button" id="add-button" value="Click me">
             </form>
         </div>
-
-
-        <div class="empty-list" style="display: none;">
-            <h1>you have an empty to do list</h1>
-        </div>
-
-
-
-        <div class="todolist" id="taskList">
-
-
+        <div class="todolist hidden" id="taskList">
             <div class="list-cards">
-                <h2>nothing here!</h2>
+                <h3>you have an empty to do list</h3>
+                <!-- <button id="edit-button" data-action="edit">edit</button>
+                <button id="delete-button" data-action="delete">delete</button>
+                <h2>nothing here!</h2> -->
             </div>
         </div>
     </main>
-
     <footer>
     </footer>
 </body>
