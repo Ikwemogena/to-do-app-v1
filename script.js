@@ -6,7 +6,8 @@ const listInput = document.getElementById('task-input');
 const addTask = document.getElementById('add-button');
 const taskList = document.getElementById('taskList');
 
-let toDoList = [];
+let toDoList = JSON.parse(localStorage.getItem('todolist')) || [];
+
 let EditTodoId = -1;
 
 form.addEventListener('submit',  () => {
@@ -15,6 +16,8 @@ form.addEventListener('submit',  () => {
     addToList();
     pushToUi();
     resetUserInput();
+
+    localStorage.setItem('todolist', JSON.stringify(toDoList));
 })
 
 const resetUserInput = () => listInput.value = ""//clears input box
@@ -53,11 +56,11 @@ function addToList(){
     console.log(toDoList);
 }
 
-    // isEmpty?alert("todoisempty"):"e dey work"
-
-
 function pushToUi(){
+    
     if (toDoList.length === null) {
+        localStorage.setItem('todolist', JSON.stringify(toDoList));
+        console.log("enter enter")
         console.log(toDoList.length);
         taskList.innerHTML = '<h1>Nothing to do!</h1>';
         return;
@@ -84,13 +87,8 @@ taskList.addEventListener('click', (event) => {
 
     if (parentElement.className !== 'list-cards') return false;
 
-    // console.log(parentElement);
-
     const todoItem = parentElement;
     const todoItemID = Number(todoItem.id);
-
-    // console.log(todoItemID);
-    // console.log(task.value);
 
     //target action
     const action = target.dataset.action;
@@ -116,7 +114,7 @@ function deleteTodo(todoItemID) {
 
     // re-render
     pushToUi();
-    console.table(toDoList)
+    localStorage.setItem('todolist', JSON.stringify(toDoList));
 }
 
 //display input box
@@ -127,4 +125,6 @@ addButton.addEventListener('click', () => {
     showHome.classList.remove('hidden')
     addButton.classList.add('hidden')
     taskList.classList.remove('hidden')
+
+    localStorage.setItem('todolist', JSON.stringify(toDoList));
 })
